@@ -1,0 +1,3 @@
+title=PlayMusic
+author=Champeman22
+orientation=portrait

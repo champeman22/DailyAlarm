@@ -1,0 +1,28 @@
+#: import main main
+
+<Alarm>:
+    id:Music
+    BoxLayout:
+        spacing: 10
+        padding: 10,10,10,0
+        orientation: "horizontal"
+        BoxLayout:
+            orientation: "vertical"
+            size_hint: 0.3,1
+            Label:
+                size_hint: 1,0.3
+                text: root.current_time
+    BoxLayout:
+        padding: 10,10,10,0
+        spacing: 10
+        size_hint: 1,0.3
+        orientation: "horizontal"
+        Button:
+            text: "Play"
+            on_press: Music.play()
+        Button:
+            text: "Snooze"
+            on_press: Music.snooze()
+        Button:
+            text: "Dismiss"
+            on_press: Music.dismiss()
