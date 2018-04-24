@@ -34,19 +34,17 @@ class Alarm(BoxLayout):
 
     def resume(self):
         mixer.music.unpause()
-        
-    def stop(self):
-        mixer.music.stop()
 
     def snooze(self):
         mixer.music.pause()
-        print('You\'ve hit snooze', self.snoozeCounter, 'times.')
+        #print('You\'ve hit snooze', self.snoozeCounter, 'times.')
         time.sleep((60*(self.snoozeCounter))-(time.time()-self.start))
         self.snoozeCounter += 1
         self.play()
     
     def dismiss(self):
         mixer.music.stop()
+        #add code to exit  
 
     def set_time(self,dt):
         self.current_time = time.strftime("%m/%d/%Y %H:%M")
