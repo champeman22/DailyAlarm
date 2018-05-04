@@ -12,14 +12,14 @@
             Label:
                 size_hint: 1,0.3
                 text: root.current_time
+            Button:
+                text: "Alarm Time"
+                #Need to find out how to send to another kv file for time picker screen/popup
     BoxLayout:
         padding: 10,10,10,0
         spacing: 10
         size_hint: 1,0.3
         orientation: "horizontal"
-        Button:
-            text: "Play"
-            on_press: Music.play()
         Button:
             text: "Snooze"
             on_press: Music.snooze()
